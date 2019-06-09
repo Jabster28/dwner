@@ -33,6 +33,7 @@
 "rwin": "yarn test && build --win -p always"
   },
   "dependencies": {
+    "alltomp3": "^0.2.11",
     "fs-jetpack": "^2.1.0",
     "jquery": "^3.4.1"
   },
