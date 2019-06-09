@@ -1,15 +1,15 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "description": "Starter for your Electron application",
-  "version": "0.0.1",
+  "name": "dwner",
+  "productName": "DWNER",
+  "description": "Application for downloading music from YouTube with ease.",
+  "version": "0.0.2",
   "private": true,
   "author": "Jabster28 <justynboyer@gmail.com>",
   "copyright": "© 2019, Jabster28.",
   "homepage": "http://example.com",
   "main": "app/background.js",
   "build": {
-    "appId": "com.example.electron-boilerplate",
+    "appId": "me.glitch.dwner",
     "files": [
       "app/**/*",
       "node_modules/**/*",
