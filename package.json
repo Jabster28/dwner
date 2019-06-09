@@ -2,10 +2,10 @@
   "name": "electron-boilerplate",
   "productName": "Electron Boilerplate",
   "description": "Starter for your Electron application",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "author": "Mr. Gumby <mr.gumby@example.com>",
-  "copyright": "© 2017, Gumby inc.",
+  "author": "Jabster28 <justynboyer@gmail.com>",
+  "copyright": "© 2019, Jabster28.",
   "homepage": "http://example.com",
   "main": "app/background.js",
   "build": {
@@ -29,8 +29,8 @@
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
     "package": "yarn test && webpack --config=build/webpack.app.config.js --env=production && electron-builder",
-"release": "yarn test && build -p always",
-"rwin": "yarn test && build --win -p always"
+    "release": "yarn test && build -p always",
+    "rwin": "yarn test && build --win -p always"
   },
   "dependencies": {
     "alltomp3": "^0.2.11",
