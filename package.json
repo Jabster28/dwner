@@ -35,7 +35,7 @@
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
     "package": "yarn test && webpack --config=build/webpack.app.config.js --env=production && electron-builder",
-    "release": "yarn test && build -p always",
+    "release": "build -p always",
     "rwin": "build --win -p always"
   },
   "dependencies": {
