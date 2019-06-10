@@ -1,8 +1,8 @@
 {
   "name": "dwner",
-  "productName": "DWNER",
+  "productName": "dwner",
   "description": "Application for downloading music from YouTube with ease.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "author": "Jabster28 <justynboyer@gmail.com>",
   "copyright": "© 2019, Jabster28.",
