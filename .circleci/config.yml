@@ -13,6 +13,8 @@ jobs:
           keys:
             - v-3.0.10-electron
       - run:
+          command: yarn
+      - run:
           command: yarn test
       - save_cache:
           key: deps-{{ checksum "yarn.lock" }}
