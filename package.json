@@ -7,7 +7,7 @@
   "author": "Jabster28 <justynboyer@gmail.com>",
   "copyright": "© 2019, Jabster28.",
   "homepage": "http://example.com",
-  "main": "app/background.js",
+  "main": "src/background.js",
   "build": {
     "appId": "me.glitch.dwner",
     "files": [
