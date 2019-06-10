@@ -23,14 +23,12 @@ jobs:
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
       - run:
           command: yarn
-      - run:
-          command: yarn test
       - save_cache:
           key: deps-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
       - run:
-          command: yarn release
+          command: yarn rwin
       - save_cache:
           key: v-3.0.10-electron
           paths:
