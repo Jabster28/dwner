@@ -18,7 +18,13 @@
     "directories": {
       "buildResources": "resources"
     },
-    "publish": null
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Jabster28",
+        "repo": "dwner"
+      }
+    ]
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
