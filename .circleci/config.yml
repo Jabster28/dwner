@@ -9,9 +9,7 @@ jobs:
       - run:
           command: |
             yarn
-            mv /home/circleci/project/node_modules node_modules
-            mkdir -p ~/.cache
-            mv /home/circleci/.cache/electron ~/.cache/electron
+            ls
       - run: yarn && yarn release
   build_macos:
     macos:
