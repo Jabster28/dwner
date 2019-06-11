@@ -24,17 +24,19 @@ const osMap = {
 	darwin: "macOS",
 	linux: "Linux"
 };
-document.querySelector("#app").style.display = "block";
-document.querySelector("#greet").innerHTML = greet();
-document.querySelector("#os").innerHTML = osMap[process.platform];
-document.querySelector("#author").innerHTML = manifest.author;
-document.querySelector("#env").innerHTML = env.name;
-document.querySelector("#electron-version").innerHTML = process.versions.electron;
-$("#submit").click(() => {
-	debugger;
-	var q = "http://api.youtube6download.top/api/?id=" + encodeURIComponent($("#text").val());
-	$.get(q, {}, (s) => {
-		console.log(q);
-		console.log(s);
+window.$(() => {
+	document.querySelector("#greet").innerHTML = greet();
+	document.querySelector("#os").innerHTML = osMap[process.platform];
+	document.querySelector("#author").innerHTML = manifest.author;
+	document.querySelector("#env").innerHTML = env.name;
+	document.querySelector("#electron-version").innerHTML = process.versions.electron;
+	document.querySelector("#app").style.display = "block";
+	window.$("#submit").click(() => {
+		debugger;
+		var q = "http://api.youtube6download.top/api/?id=" + encodeURIComponent(window.$("#text").val());
+		window.$.get(q, {}, (s) => {
+			console.log(q);
+			console.log(s);
+		});
 	});
 });
