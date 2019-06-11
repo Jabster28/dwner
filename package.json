@@ -34,9 +34,9 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
-    "package": "build -p never",
-    "release": "build -p always",
-    "rwin": "build --win -p always"
+    "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
+    "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
+    "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always"
   },
   "dependencies": {
     "alltomp3": "^0.2.11",
