@@ -35,8 +35,8 @@
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
     "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
-    "release": "webpack --config=build/webpac.app.config.js --env=production && build -p always",
-    "rwin": "webpack --config=build/webpack.app.cnfig.js --env=production && build --win -p always"
+    "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
+    "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always"
   },
   "dependencies": {
     "alltomp3": "^0.2.11",
@@ -55,11 +55,12 @@
     "electron-builder": "^20.38.4",
     "electron-mocha": "^6.0.4",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "mocha": "^5.2.0",
     "source-map-support": "^0.5.6",
     "spectron": "^3.8.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.12.0",
-    "webpack-cli": "1.0.0",
+    "webpack-cli": "^3.0.4",
     "webpack-merge": "^4.1.3",
     "webpack-node-externals": "^1.7.2"
   }
