@@ -3,7 +3,7 @@
   "productName": "dwner",
   "description": "Application for downloading music from YouTube with ease.",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "author": "Jabster28 <justynboyer@gmail.com>",
   "copyright": "© 2019, Jabster28.",
   "homepage": "http://example.com",
