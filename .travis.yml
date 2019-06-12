@@ -2,7 +2,7 @@ osx_image: xcode8.3
 
 dist: trusty
 sudo: false
-
+if: branch = master
 language: node_js
 node_js: "8"
 

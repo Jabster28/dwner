@@ -2,8 +2,8 @@
   "name": "dwner",
   "productName": "dwner",
   "description": "Application for downloading music from YouTube with ease.",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "private": false,
   "author": "Jabster28 <justynboyer@gmail.com>",
   "copyright": "© 2019, Jabster28.",
   "homepage": "http://example.com",
@@ -34,9 +34,9 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
-    "package": "webpack --config=build/webpack.app.config.js --env=production && electron-builder",
-    "release": "yarn package && build -p always",
-    "rwin": "yarn package && build --win -p always"
+    "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
+    "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
+    "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always"
   },
   "dependencies": {
     "alltomp3": "^0.2.11",
