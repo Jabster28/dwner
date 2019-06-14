@@ -15,11 +15,11 @@ import env from "env";
 // in config/env_xxx.json file.
 
 const setApplicationMenu = () => {
-	const menus = [editMenuTemplate];
-	if (env.name !== "production") {
-		menus.push(devMenuTemplate);
-	}
-	Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
+  const menus = [editMenuTemplate];
+  if (env.name !== "production") {
+    menus.push(devMenuTemplate);
+  }
+  Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
 };
 autoUpdater.checkForUpdatesAndNotify();
 
@@ -27,8 +27,8 @@ autoUpdater.checkForUpdatesAndNotify();
 // Thanks to this you can use production and development versions of the app
 // on same machine like those are two separate apps.
 if (env.name !== "production") {
-	const userDataPath = app.getPath("userData");
-	app.setPath("userData", `${userDataPath} (${env.name})`);
+  const userDataPath = app.getPath("userData");
+  app.setPath("userData", `${userDataPath} (${env.name})`);
 }
 // Make the window
 app.on("ready", () => {
@@ -49,5 +49,5 @@ app.on("ready", () => {
 });
 // Quit on close
 app.on("window-all-closed", () => {
-	app.quit();
+  app.quit();
 });
