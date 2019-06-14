@@ -29,16 +29,17 @@ install:
   - yarn
 
 script:
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
-      yarn release;
-    else
-      yarn package;
-    fi
+  - yarn package;
 
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
-
+  
+deploy:
+  - provider: script
+    script: yarn publish
+    on:
+      branch: production
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
