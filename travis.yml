@@ -38,7 +38,7 @@ before_cache:
 deploy:
     skip_cleanup: true
   - provider: script
-    script: bash -c "yarn publish"
+    script: bash -c "yarn package"
     on:
       branch: master
 branches:
