@@ -11,8 +11,8 @@ addons:
     packages:
       - g++-4.8
 env:
-  - CXX=g++-4.8
   global:
+    - CXX=g++-4.8
     - ELECTRON_CACHE=$HOME/.cache/electron
     - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
 
