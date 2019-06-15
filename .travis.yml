@@ -37,7 +37,7 @@ before_cache:
   
 deploy:
   - provider: script
-    script: yarn publish
+    script: bash -c "yarn publish"
     on:
       branch: master
 branches:
