@@ -5,7 +5,8 @@
 
 import path from "path";
 import url from "url";
-import { app, Menu } from "electron";
+import { download } from "electron-dl"
+import { app, Menu, ipcMain, BrowserWindow} from "electron";
 import { devMenuTemplate } from "./menu/dev_menu_template";
 import { editMenuTemplate } from "./menu/edit_menu_template";
 import createWindow from "./helpers/window";
@@ -42,6 +43,9 @@ app.on("ready", () => {
 		protocol: "file:",
 		slashes: true
 	}));
+  ipcMain.on("download", (event, info) => {
+    download(BrowserWindow.getFocusedWindow(), info.url, info.properties).then(dl => mainWindow.webContents.send("download complete", dl.getSavePath()));
+  });
   // Open devtools if in dev stage
 	if (env.name === "development") {
 		mainWindow.openDevTools();
