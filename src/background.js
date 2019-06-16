@@ -40,10 +40,10 @@ app.on("ready", () => {
 	});
 	mainWindow.loadURL(url.format({
 		pathname: path.join(__dirname, "app.html"),
-		protocol: "file:",
-		slashes: true
-	}));
-  ipcMain.on("download", (event, info) => {
+  		protocol: "file:",
+  		slashes: true
+  	}));
+    ipcMain.on("download", (event, info) => {
     download(BrowserWindow.getFocusedWindow(), info.url, info.properties).then(dl => mainWindow.webContents.send("download complete", dl.getSavePath()));
   });
   // Open devtools if in dev stage
