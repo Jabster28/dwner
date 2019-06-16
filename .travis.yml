@@ -33,7 +33,6 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 install:
   - yarn
-  - apt-get update -qy
 
 script:
   - if [ "$TRAVIS_BRANCH" = "release" ]; then
