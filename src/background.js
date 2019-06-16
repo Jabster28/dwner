@@ -5,8 +5,8 @@
 
 import path from "path";
 import url from "url";
-import { download } from "electron-dl"
-import { app, Menu, ipcMain, BrowserWindow} from "electron";
+import { download } from "electron-dl";
+import { app, Menu, ipcMain, BrowserWindow } from "electron";
 import { devMenuTemplate } from "./menu/dev_menu_template";
 import { editMenuTemplate } from "./menu/edit_menu_template";
 import createWindow from "./helpers/window";
@@ -18,7 +18,7 @@ import env from "env";
 const setApplicationMenu = () => {
   const menus = [editMenuTemplate];
   // if (env.name !== "production") {
-    menus.push(devMenuTemplate);
+  menus.push(devMenuTemplate);
   // }
   Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
 };
@@ -33,23 +33,27 @@ if (env.name !== "production") {
 }
 // Make the window
 app.on("ready", () => {
-	setApplicationMenu();
-	const mainWindow = createWindow("main", {
-		width: 1000,
-		height: 600
-	});
-	mainWindow.loadURL(url.format({
-		pathname: path.join(__dirname, "app.html"),
-  		protocol: "file:",
-  		slashes: true
-  	}));
-    ipcMain.on("download", (event, info) => {
-    download(BrowserWindow.getFocusedWindow(), info.url, info.properties).then(dl => mainWindow.webContents.send("download complete", dl.getSavePath()));
+  setApplicationMenu();
+  const mainWindow = createWindow("main", {
+    width: 1000,
+    height: 600
+  });
+  mainWindow.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "app.html"),
+      protocol: "file:",
+      slashes: true
+    })
+  );
+  ipcMain.on("download", (event, info) => {
+    download(BrowserWindow.getFocusedWindow(), info.url, info.properties).then(
+      dl => mainWindow.webContents.send("download complete", dl.getSavePath())
+    );
   });
   // Open devtools if in dev stage
-	if (env.name === "development") {
-		mainWindow.openDevTools();
-	}
+  if (env.name === "development") {
+    mainWindow.openDevTools();
+  }
 });
 // Quit on close
 app.on("window-all-closed", () => {
