@@ -49,7 +49,8 @@ window.$(() => {
 	document.querySelector("#os").innerHTML = osMap[process.platform];
 	document.querySelector("#author").innerHTML = manifest.author;
 	document.querySelector("#env").innerHTML = env.name;
-	document.querySelector("#electron-version").innerHTML = process.versions.electron;
+  document.querySelector("#electron-version").innerHTML = process.versions.electron;
+	document.querySelector("#version").innerHTML = manifest.version;
 	document.querySelector("#app").style.display = "block";
 	window.$("#submit").click(() => {
     window.$("#submit").prop("disabled", true)
