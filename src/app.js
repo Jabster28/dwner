@@ -16,25 +16,39 @@ import env from "env";
 const app = remote.app;
 const appDir = jetpack.cwd(app.getAppPath());
 ipcRenderer.on("download complete", (event, file) => {
-    console.log(file); // Full file path
 });
 var aj = (u, s) => {
   window.$.ajax({
     url: u,
     success: (e) => {
-      if (s) s()
-      return e
+      if (s) s(e)
     }
   })
 }
+
 var download = (a) => {
-  var w = aj(`https://dwner.glitch.me/f?m=${a}`)
-  while (w == "wait") w = aj(u)
-  ipcRenderer.send("download", {
-      url: "https://dwner.glitch.me/f?m=" + a,
-      filename: "download.mp3"
-  });
-}
+  var xxx = (r) => {
+ aj(`https://dwner.glitch.me/f?m=${a}`, (e) => {
+             if (e == "wait") {
+               setTiemout(1000, xxx(r))
+               return 5;
+             }
+             r()
+
+    })
+
+  }
+
+xxx(() => {
+    ipcRenderer.send("download", {
+        url: "https://dwner.glitch.me/x?m=" + a,
+        properties: {
+          filename: "download.mp3",
+          onStart: () => {
+          }
+        }
+    });
+})}
 window.$ = window.jQuery = require("jquery");
 // Holy crap! This is browser window with HTML and stuff, but I can read
 // files from disk like it's node.js! Welcome to Electron world :)
@@ -45,6 +59,7 @@ const osMap = {
 	linux: "Linux"
 };
 window.$(() => {
+  window.$("#text").val("https://www.youtube.com/watch?v=kKdVeWeYDT8")
 	document.querySelector("#greet").innerHTML = greet();
 	document.querySelector("#os").innerHTML = osMap[process.platform];
 	document.querySelector("#author").innerHTML = manifest.author;
@@ -58,7 +73,6 @@ window.$(() => {
 		window.$.ajax({
       url: q,
       success: (a) => {
-        console.log(a)
         download(a)
       }
     })
