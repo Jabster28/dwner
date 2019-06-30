@@ -53,7 +53,7 @@ const osMap = {
 };
 window.$(() => {
   window.$("#text").val("https://www.youtube.com/watch?v=kKdVeWeYDT8");
-  document.querySelector("#greet").innerHTML = greet();
+  document.querySelector("#greet").innerHTML = "Hii!!!";
   document.querySelector("#os").innerHTML = osMap[process.platform];
   document.querySelector("#author").innerHTML = manifest.author;
   document.querySelector("#env").innerHTML = env.name;
