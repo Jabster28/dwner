@@ -35,6 +35,7 @@ install:
   - yarn
 
 script:
+  - yarn test
   - if [ "$TRAVIS_BRANCH" = "release" ]; then
       yarn release;
     else

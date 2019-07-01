@@ -7,11 +7,10 @@ import "./helpers/external_links.js";
 // ----------------------------------------------------------------------------
 import { remote, ipcRenderer } from "electron";
 import jetpack from "fs-jetpack";
-import { greet } from "./hello_world/hello_world";
 import env from "env";
 const app = remote.app;
 const appDir = jetpack.cwd(app.getAppPath());
-ipcRenderer.on("download complete", (event, file) => {});
+ipcRenderer.on("download complete", () => {});
 var aj = (u, s) => {
   window.$.ajax({
     url: u,
@@ -25,7 +24,7 @@ var download = a => {
   var xxx = r => {
     aj(`https://dwner.glitch.me/f?m=${a}`, e => {
       if (e == "wait") {
-        setTiemout(1000, xxx(r));
+        setTimeout(1000, xxx(r));
         return 5;
       }
       r();
