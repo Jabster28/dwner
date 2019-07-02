@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "yarn lint && yarn e2e",
-    "e2e": "mocha --timeout 100000 \"./test/*.test.js\"",
+    "e2e": "mocha --timeout 50000 \"./test/*.test.js\"",
     "postinstall": "electron-builder install-app-deps",
     "preunit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
     "unit": "electron-mocha temp/specs.js --renderer --require source-map-support/register",
