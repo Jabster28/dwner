@@ -15,4 +15,4 @@ function init() {
     chromeDriverLogPath: "../chromelog.txt"
   });
 }
-module.exports = {init};
+module.exports = { init };
