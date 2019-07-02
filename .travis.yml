@@ -3,7 +3,8 @@ dist: trusty
 sudo: true
 language: node_js
 node_js: "10"
-
+services:
+  - xvfb
 addons:
   apt:
     sources:
@@ -31,6 +32,7 @@ before_install:
   - mkdir -p /tmp/git-lfs && curl -L https://github.com/github/git-lfs/releases/download/v2.2.0/git-lfs-$([ "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-2.2.0.tar.gz | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
+before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 3
@@ -39,7 +41,9 @@ install:
   - yarn
 
 script:
-  - yarn test
+  - echo "e2e"
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then xvfb-run yarn test; else yarn test; fi
+  - echo "Release"
   - if [ "$TRAVIS_BRANCH" = "release" ]; then
       yarn release;
     else
