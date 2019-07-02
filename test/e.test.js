@@ -15,9 +15,7 @@ before( function () {
 
 after( function () {
   console.log(4);
-  if (app && app.isRunning()) {
     return app.stop();
-  }
 });
 describe("Main", function() {
   it("open window", function () {
