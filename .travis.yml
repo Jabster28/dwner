@@ -41,7 +41,7 @@ install:
   - yarn
 script:
   - echo "e2e"
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then xvfb-run yarn test; else yarn test; fi
+  - yarn test 
   - echo "Release"
   - if [ "$TRAVIS_BRANCH" = "release" ]; then
       yarn release;
