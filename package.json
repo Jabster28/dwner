@@ -32,7 +32,7 @@
     "postinstall": "electron-builder install-app-deps",
     "preunit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
     "unit": "electron-mocha temp/specs.js --renderer --require source-map-support/register",
-    "lint": "node ./node_modules/.bin/eslint . --ignore-path .gitignore",
+    "lint": "eslint . --ignore-path .gitignore",
     "start": "node build/start.js",
     "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
     "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
