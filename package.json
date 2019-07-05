@@ -49,15 +49,15 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "@babel/core": "7.4.5",
-    "@babel/preset-env": "7.4.5",
+    "@babel/core": "7.5.0",
+    "@babel/preset-env": "7.5.0",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.6",
     "babel-plugin-transform-object-rest-spread": "7.0.0-beta.3",
     "chai": "4.2.0",
     "css-loader": "1.0.1",
     "electron": "2.0.18",
-    "electron-builder": "20.43.0",
+    "electron-builder": "20.44.4",
     "electron-mocha": "6.0.4",
     "friendly-errors-webpack-plugin": "1.7.0",
     "mocha": "5.2.0",
