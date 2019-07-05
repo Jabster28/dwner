@@ -58,7 +58,7 @@
     "css-loader": "3.0.0",
     "electron": "2.0.18",
     "electron-builder": "20.44.4",
-    "electron-mocha": "6.0.4",
+    "electron-mocha": "8.0.3",
     "friendly-errors-webpack-plugin": "1.7.0",
     "mocha": "6.1.4",
     "source-map-support": "0.5.12",
