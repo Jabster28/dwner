@@ -35,10 +35,10 @@
     "lint": "eslint . --ignore-path .gitignore",
     "start": "node build/start.js",
     "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
-    "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
+    "release": "yarn synk-protect && webpack --config=build/webpack.app.config.js --env=production && build -p always",
     "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn snyk-protect"
   },
   "dependencies": {
     "alltomp3": "^0.2.11",
