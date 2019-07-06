@@ -67,7 +67,7 @@ module.exports = {
 		"no-loop-func": "off",
 		"no-magic-numbers": ["warn", {
 			ignoreArrayIndexes: true,
-			ignore: [404, 5, 0, 1, -1]
+			ignore: [404, 5, 0, 1, -1, 1000, 100000, 10000]
 		}],
 		"no-mixed-operators": "off",
 		"no-mixed-requires": "off",
