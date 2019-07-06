@@ -6,5 +6,6 @@
   "major": {
     "automerge": false
   },
-  "baseBranches": ["master"]
+  "baseBranches": ["master"],
+  "assignees": ["Jabster28"]
 }
