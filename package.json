@@ -36,7 +36,6 @@
     "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always"
   },
   "dependencies": {
-    "alltomp3": "^0.2.11",
     "audio-metadata": "^0.3.0",
     "electron-dl": "^1.14.0",
     "electron-log": "^3.0.6",
@@ -56,6 +55,7 @@
     "electron": "4.0.0",
     "electron-builder": "20.44.4",
     "electron-mocha": "8.0.3",
+    "eslint": "^6.0.1",
     "friendly-errors-webpack-plugin": "1.7.0",
     "mocha": "6.1.4",
     "source-map-support": "0.5.12",
