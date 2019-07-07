@@ -20,7 +20,6 @@ install:
   - yarn
 
 build_script:
-  - yarn test
   - yarn rwin
 
 test: off
