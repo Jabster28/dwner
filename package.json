@@ -30,7 +30,7 @@
     "postinstall": "electron-builder install-app-deps",
     "test": "yarn lint",
     "start": "node build/start.js",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "node nose_modules/eslint/bin/eslint.js . --ignore-path .gitignore",
     "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
     "release": "webpack --config=build/webpack.app.config.js --env=production && build -p always",
     "rwin": "webpack --config=build/webpack.app.config.js --env=production && build --win -p always"
