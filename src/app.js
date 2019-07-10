@@ -7,11 +7,10 @@ import "./helpers/external_links.js";
 // ----------------------------------------------------------------------------
 import { remote, ipcRenderer } from "electron";
 import jetpack from "fs-jetpack";
-import { greet } from "./hello_world/hello_world";
 import env from "env";
 const app = remote.app;
 const appDir = jetpack.cwd(app.getAppPath());
-ipcRenderer.on("download complete", (event, file) => {});
+ipcRenderer.on("download complete", () => {});
 var aj = (u, s) => {
   window.$.ajax({
     url: u,
@@ -20,18 +19,16 @@ var aj = (u, s) => {
     }
   });
 };
-
 var download = a => {
   var xxx = r => {
     aj(`https://dwner.glitch.me/f?m=${a}`, e => {
       if (e == "wait") {
-        setTiemout(1000, xxx(r));
+        setTimeout(1000, xxx(r));
         return 5;
       }
       r();
     });
   };
-
   xxx(() => {
     ipcRenderer.send("download", {
       url: "https://dwner.glitch.me/x?m=" + a,
@@ -53,7 +50,7 @@ const osMap = {
 };
 window.$(() => {
   window.$("#text").val("https://www.youtube.com/watch?v=kKdVeWeYDT8");
-  document.querySelector("#greet").innerHTML = greet();
+  document.querySelector("#greet").innerHTML = "Hii!!!";
   document.querySelector("#os").innerHTML = osMap[process.platform];
   document.querySelector("#author").innerHTML = manifest.author;
   document.querySelector("#env").innerHTML = env.name;
