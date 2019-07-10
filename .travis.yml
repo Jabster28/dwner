@@ -3,18 +3,17 @@ dist: trusty
 sudo: true
 language: node_js
 node_js: "10"
-
 addons:
+  chrome: stable
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
+      - xvfb
+
 env:
   global:
-    - CXX=g++-4.8
     - ELECTRON_CACHE=$HOME/.cache/electron
     - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+    - PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig"
 
 os:
   - linux
@@ -31,10 +30,16 @@ before_install:
   - mkdir -p /tmp/git-lfs && curl -L https://github.com/github/git-lfs/releases/download/v2.2.0/git-lfs-$([ "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-2.2.0.tar.gz | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
+before_script:
+  - export DISPLAY=:99.0
+  - sleep 3
+
 install:
   - yarn
-
 script:
+  - echo "e2e"
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; fi
+  - echo "Release"
   - if [ "$TRAVIS_BRANCH" = "release" ]; then
       yarn release;
     else
