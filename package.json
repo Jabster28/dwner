@@ -28,7 +28,8 @@
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "test": "yarn lint",
+    "test": "yarn lint && yarn e2e",
+    "e2e": "mocha -R mocha-jenkins-reporter --timeout 20000 test/*.test.js",
     "start": "node build/start.js",
     "lint": "eslint . --ignore-path .gitignore",
     "package": "webpack --config=build/webpack.app.config.js --env=production && build -p never",
