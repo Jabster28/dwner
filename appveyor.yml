@@ -23,3 +23,10 @@ build_script:
   - yarn rwin
 
 test: off
+
+on_failure:
+  - curl -s https://report.ci/annotate.py | python - --tool msvc --input build.log  
+
+on_finish:
+  # Framework with autodetection
+  - curl -s https://report.ci/upload.py | python
