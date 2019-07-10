@@ -21,7 +21,7 @@ build_script:
 test: off
 
 on_failure:
-  - curl -s https://report.ci/annotate.py | python - --tool msvc --input build.log  
+  - curl -s https://report.ci/annotate.py | python - --tool msvc --input build.log
 
 on_finish:
   # Framework with autodetection
