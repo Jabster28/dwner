@@ -14,6 +14,10 @@ module.exports = {
 		Windows: {
 			sh: true,
 			cmd: "yarn pwin"
-		}
+		},
+    Test: {
+      sh: true,
+      cmd: "yarn test"
+    }
 	}
 }
