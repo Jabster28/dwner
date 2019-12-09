@@ -38,7 +38,7 @@
   "dependencies": {
     "audio-metadata": "^0.3.0",
     "electron-dl": "^1.14.0",
-    "electron-log": "^3.0.6",
+    "electron-log": "^4.0.0",
     "electron-updater": "^4.0.6",
     "express": "^4.17.1",
     "fs-jetpack": "^2.1.0",
