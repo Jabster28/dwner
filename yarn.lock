@@ -2699,10 +2699,10 @@ electron-window@^0.8.0:
   dependencies:
     is-electron-renderer "^2.0.0"
 
-electron@6.1.7:
-  version "6.1.7"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-6.1.7.tgz#a67695f81f5cb771e395bcf9711560520e347c54"
-  integrity sha512-QhBA/fcYJit2XJGkD2xEfxlWTtTaWYu7qkKVohtVWXpELFqkpel2DCDxet5BTo0qs8ukuZHxlQPnIonODnl2bw==
+electron@6.1.8:
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-6.1.8.tgz#5bc8e4db4f860526f9a98db00597a6fc7c57ecea"
+  integrity sha512-crrWUBTfGbNYh7riijx+SYLOj6j6R1M+OnP0p5tGhb4bUFBt3Xaf2oATTLIeJlCRD8CRRMUgxwsVkHVqBKmP2Q==
   dependencies:
     "@types/node" "^10.12.18"
     electron-download "^4.1.0"
