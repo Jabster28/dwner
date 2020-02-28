@@ -2685,10 +2685,10 @@ electron-window@^0.8.0:
   dependencies:
     is-electron-renderer "^2.0.0"
 
-electron@6.1.8:
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-6.1.8.tgz#5bc8e4db4f860526f9a98db00597a6fc7c57ecea"
-  integrity sha512-crrWUBTfGbNYh7riijx+SYLOj6j6R1M+OnP0p5tGhb4bUFBt3Xaf2oATTLIeJlCRD8CRRMUgxwsVkHVqBKmP2Q==
+electron@6.1.9:
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-6.1.9.tgz#4f28c4bdd0cdfd427ea98ce6ad02f303638f7b1f"
+  integrity sha512-Sm6pIR9yr9oBnIzwWnwSyTiZwj3fdp3X0pBDWDmw2wf/RtZlKH4PEkEu622AZLyXyhBKUiD2Jajkr5c4MelRxw==
   dependencies:
     "@types/node" "^10.12.18"
     electron-download "^4.1.0"
