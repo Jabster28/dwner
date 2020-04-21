@@ -58,7 +58,7 @@
     "eslint": "6.8.0",
     "friendly-errors-webpack-plugin": "1.7.0",
     "mocha": "6.2.3",
-    "source-map-support": "0.5.17",
+    "source-map-support": "0.5.18",
     "spectron": "8.0.0",
     "style-loader": "0.23.1",
     "webpack": "4.42.1",
