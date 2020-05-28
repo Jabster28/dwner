@@ -60,7 +60,7 @@
     "mocha": "6.2.3",
     "source-map-support": "0.5.19",
     "spectron": "8.0.0",
-    "style-loader": "0.23.1",
+    "style-loader": "1.2.1",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
     "webpack-merge": "4.2.2",
